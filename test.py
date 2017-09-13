@@ -3,7 +3,7 @@ import unittest
 import Int_To_Roman
 
 
-class TestSingleValues(unittest.TestCase):
+class TestEncodeSingleValues(unittest.TestCase):
     def test_encode_single_I(self):
         self.assertEqual(Int_To_Roman.encode_num(1), 'I')
 
@@ -44,7 +44,7 @@ class TestSingleValues(unittest.TestCase):
         self.assertEqual(Int_To_Roman.encode_num(1000), 'M')
 
 
-class TestMultiValue(unittest.TestCase):
+class TestEncodeMultiValue(unittest.TestCase):
     def test_encode_straight_no_duplicates_no_multivalues(self):
         self.assertEqual(Int_To_Roman.encode_num(1666), 'MDCLXVI')
 
