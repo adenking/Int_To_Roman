@@ -43,6 +43,7 @@ class TestSingleValues(unittest.TestCase):
     def test_encode_single_M(self):
         self.assertEqual(Int_To_Roman.encode_num(1000), 'M')
 
+
 class TestMultiValue(unittest.TestCase):
     def test_encode_straight_no_duplicates_no_multivalues(self):
         self.assertEqual(Int_To_Roman.encode_num(1666), 'MDCLXVI')
@@ -52,5 +53,3 @@ class TestMultiValue(unittest.TestCase):
 
     def test_encode_straight_duplicates(self):
         self.assertEqual(Int_To_Roman.encode_num(1988), 'MCMLXXXVIII')
-
-
