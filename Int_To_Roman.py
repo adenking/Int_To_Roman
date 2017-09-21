@@ -16,34 +16,13 @@ def encode_num(num):
                     num -= i
     return roman_num
 
-
-# Used to decode roman numerals to Ints
-def decode_num(num):
-    roman_num = ''
-    while num > 0:
-        for i in roman_values:
-            if num == 0:
-                break
-            else:
-                while num >= i:
-                    roman_num += roman_values[i]
-                    num -= i
-    return roman_num
-
-
 to_convert = 0
 completed = False
 while not completed:
-    enc_dec = input('encode or decode: (enc:dec:quit)')
+    enc_dec = input('encode or quit: (enc:quit)')
     if enc_dec == 'enc':
         to_convert = int(input('number to convert:'))
         print(encode_num(to_convert))
-        if input('would you like to convert another? (y:n)') == 'n':
-            print('thanks for using Int to Roman')
-            completed = True
-    elif enc_dec == 'dec':
-        to_convert = int(input('Roman Numeral to convert:'))
-        print(decode_num(to_convert))
         if input('would you like to convert another? (y:n)') == 'n':
             print('thanks for using Int to Roman')
             completed = True
